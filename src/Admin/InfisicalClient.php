@@ -1,3 +1,4 @@
+{{REWRITTEN_CODE}}
 <?php
 
 namespace InfisicalPhp\App\Admin;
@@ -11,7 +12,7 @@ use GuzzleHttp\Command\Guzzle\Description;
 
 /**
  * class InfisicalClient
- * @package Infisical\Admin\Client
+ * @package InfisicalPhp\App\Admin
  * @method array getToken array $args=array() Get the access token
  */
 class InfisicalClient extends GuzzleClient
@@ -25,6 +26,7 @@ class InfisicalClient extends GuzzleClient
     // Static factory method that receives Client and Description
     public static function factory(array $config)
     {
+        $default = array();
         $client = new Client();
         $file = 'Infisical_0.0.1.php';
         $serviceDescriptionData = include __DIR__ . "/Resources/{$file}";
@@ -33,7 +35,7 @@ class InfisicalClient extends GuzzleClient
     }
 
     /**
-     * Sets the BaseUri used by the Keycloak Client
+     * Sets the BaseUri used by the Infisical Client
      *
      * @param string $baseUri
      */
@@ -44,10 +46,30 @@ class InfisicalClient extends GuzzleClient
 
 
     /**
-     * Sets the Realm name used by the Keycloak Client
+     * Gets the BaseUri used by the Infisical Client.
+     *
+     * @return string|null The configured base URI.
      */
     public function getBaseUri()
     {
         return $this->getConfig('baseUri');
+    }
+
+    /**
+     * Attempt to parse config and apply defaults
+     *
+     * @param  array  $config
+     * @param  array  $default
+     *
+     * @return array Returns the updated config array
+     */
+    protected static function parseConfig($config, $default)
+    {
+        array_walk($default, function ($value, $key) use (&$config) {
+            if (!isset($config[$key])) {
+                $config[$key] = $value;
+            }
+        });
+        return $config;
     }
 }
