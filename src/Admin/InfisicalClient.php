@@ -45,8 +45,6 @@ class InfisicalClient extends GuzzleClient
 
     /**
      * Sets the Realm name used by the Keycloak Client
-     *
-     * @param string $realm
      */
     public function getBaseUri()
     {
