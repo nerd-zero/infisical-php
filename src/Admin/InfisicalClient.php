@@ -54,4 +54,22 @@ class InfisicalClient extends GuzzleClient
     {
         return $this->getConfig('baseUri');
     }
+
+    /**
+     * Attempt to parse config and apply defaults
+     *
+     * @param  array  $config
+     * @param  array  $default
+     *
+     * @return array Returns the updated config array
+     */
+    protected static function parseConfig($config, $default)
+    {
+        array_walk($default, function ($value, $key) use (&$config) {
+            if (!isset($config[$key])) {
+                $config[$key] = $value;
+            }
+        });
+        return $config;
+    }
 }
