@@ -1,0 +1,1406 @@
+{
+  [
+    "httpClient":"GuzzleHttp\Command\ServiceClient":private
+  ]=>
+  object(GuzzleHttp\Client)#12 (1) {
+    [
+      "config":"GuzzleHttp\Client":private
+    ]=>
+    array(13) {
+      [
+        "clientId"
+      ]=>
+      string(36) "4c7547d1-cc6c-47a1-9516-416fe7d6f04f"[
+        "clientSecret"
+      ]=>
+      string(64) "51a67de36f7e5c28e791b62ad14290f5c7f0f3092906eab810bb9ed79743f57b"[
+        "baseUri"
+      ]=>
+      string(21) "http://localhost:8080"[
+        "apiVersion"
+      ]=>
+      string(5) "0.0.1"[
+        "token_storage"
+      ]=>
+      object(Infisical\Admin\TokenStorages\RuntimeTokenStorage)#2 (1) {
+        [
+          "token":"Infisical\Admin\TokenStorages\RuntimeTokenStorage":private
+        ]=>
+        NULL
+      }
+      [
+        "handler"
+      ]=>
+      object(GuzzleHttp\HandlerStack)#4 (3) {
+        [
+          "handler":"GuzzleHttp\HandlerStack":private
+        ]=>
+        object(GuzzleHttp\Handler\CurlHandler)#5 (1) {
+          [
+            "factory":"GuzzleHttp\Handler\CurlHandler":private
+          ]=>
+          object(GuzzleHttp\Handler\CurlFactory)#6 (2) {
+            [
+              "handles":"GuzzleHttp\Handler\CurlFactory":private
+            ]=>
+            array(0) {}
+            [
+              "maxHandles":"GuzzleHttp\Handler\CurlFactory":private
+            ]=>
+            int(3)
+          }
+        }
+        [
+          "stack":"GuzzleHttp\HandlerStack":private
+        ]=>
+        array(1) {
+          [
+            0
+          ]=>
+          array(2) {
+            [
+              0
+            ]=>
+            object(Infisical\Admin\Middleware\RefreshToken)#7 (1) {
+              [
+                "tokenStorage":"Infisical\Admin\Middleware\RefreshToken":private
+              ]=>
+              object(Infisical\Admin\TokenStorages\RuntimeTokenStorage)#2 (1) {
+                [
+                  "token":"Infisical\Admin\TokenStorages\RuntimeTokenStorage":private
+                ]=>
+                NULL
+              }
+            }
+            [
+              1
+            ]=>
+            string(0) ""
+          }
+        }
+        [
+          "cached":"GuzzleHttp\HandlerStack":private
+        ]=>
+        NULL
+      }
+      [
+        "allow_redirects"
+      ]=>
+      array(5) {
+        [
+          "max"
+        ]=>
+        int(5)
+        [
+          "protocols"
+        ]=>
+        array(2) {
+          [
+            0
+          ]=>
+          string(4) "http"[
+            1
+          ]=>
+          string(5) "https"
+        }
+        [
+          "strict"
+        ]=>
+        bool(false)
+        [
+          "referer"
+        ]=>
+        bool(false)
+        [
+          "track_redirects"
+        ]=>
+        bool(false)
+      }
+      [
+        "http_errors"
+      ]=>
+      bool(true)
+      [
+        "decode_content"
+      ]=>
+      bool(true)
+      [
+        "verify"
+      ]=>
+      bool(true)
+      [
+        "cookies"
+      ]=>
+      bool(false)
+      [
+        "idn_conversion"
+      ]=>
+      bool(false)
+      [
+        "headers"
+      ]=>
+      array(1) {
+        [
+          "User-Agent"
+        ]=>
+        string(12) "GuzzleHttp/7"
+      }
+    }
+  }
+  [
+    "handlerStack":"GuzzleHttp\Command\ServiceClient":private
+  ]=>
+  object(GuzzleHttp\HandlerStack)#25 (3) {
+    [
+      "handler":"GuzzleHttp\HandlerStack":private
+    ]=>
+    object(Closure)#26 (5) {
+      [
+        "name"
+      ]=>
+      string(70) "{closure:GuzzleHttp\Command\ServiceClient::createCommandHandler():168}"[
+        "file"
+      ]=>
+      string(99) "/home/tadiwapfachi/Projects/nerd-zero/infisical-php/vendor/guzzlehttp/command/src/ServiceClient.php"[
+        "line"
+      ]=>
+      int(168)
+      [
+        "this"
+      ]=>
+      *RECURSION*
+      [
+        "parameter"
+      ]=>
+      array(1) {
+        [
+          "$command"
+        ]=>
+        string(10) "<required>"
+      }
+    }
+    [
+      "stack":"GuzzleHttp\HandlerStack":private
+    ]=>
+    array(1) {
+      [
+        0
+      ]=>
+      array(2) {
+        [
+          0
+        ]=>
+        object(GuzzleHttp\Command\Guzzle\Handler\ValidatedDescriptionHandler)#27 (2) {
+          [
+            "validator":"GuzzleHttp\Command\Guzzle\Handler\ValidatedDescriptionHandler":private
+          ]=>
+          object(GuzzleHttp\Command\Guzzle\SchemaValidator)#28 (2) {
+            [
+              "castIntegerToStringType":protected
+            ]=>
+            bool(true)
+            [
+              "errors":protected
+            ]=>
+            NULL
+          }
+          [
+            "description":"GuzzleHttp\Command\Guzzle\Handler\ValidatedDescriptionHandler":private
+          ]=>
+          object(GuzzleHttp\Command\Guzzle\Description)#8 (8) {
+            [
+              "operations":"GuzzleHttp\Command\Guzzle\Description":private
+            ]=>
+            array(3) {
+              [
+                "getToken"
+              ]=>
+              array(4) {
+                [
+                  "httpMethod"
+                ]=>
+                string(4) "POST"[
+                  "uri"
+                ]=>
+                string(33) "/api/v1/auth/universal-auth/login"[
+                  "responseModel"
+                ]=>
+                string(11) "getResponse"[
+                  "parameters"
+                ]=>
+                array(2) {
+                  [
+                    "clientId"
+                  ]=>
+                  array(2) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "location"
+                    ]=>
+                    string(9) "formParam"
+                  }
+                  [
+                    "clientSecret"
+                  ]=>
+                  array(2) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "location"
+                    ]=>
+                    string(9) "formParam"
+                  }
+                }
+              }
+              [
+                "listFolders"
+              ]=>
+              array(4) {
+                [
+                  "httpMethod"
+                ]=>
+                string(3) "GET"[
+                  "uri"
+                ]=>
+                string(15) "/api/v1/folders"[
+                  "responseModel"
+                ]=>
+                string(11) "getResponse"[
+                  "parameters"
+                ]=>
+                array(5) {
+                  [
+                    "workspaceId"
+                  ]=>
+                  array(4) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "description"
+                    ]=>
+                    string(43) "The ID of the project to list folders from."[
+                      "location"
+                    ]=>
+                    string(5) "query"[
+                      "required"
+                    ]=>
+                    bool(true)
+                  }
+                  [
+                    "environment"
+                  ]=>
+                  array(2) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "location"
+                    ]=>
+                    string(5) "query"
+                  }
+                  [
+                    "path"
+                  ]=>
+                  array(2) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "location"
+                    ]=>
+                    string(5) "query"
+                  }
+                  [
+                    "directory"
+                  ]=>
+                  array(2) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "location"
+                    ]=>
+                    string(5) "query"
+                  }
+                  [
+                    "recursive"
+                  ]=>
+                  array(2) {
+                    [
+                      "type"
+                    ]=>
+                    string(7) "boolean"[
+                      "location"
+                    ]=>
+                    string(5) "query"
+                  }
+                }
+              }
+              [
+                "createFolder"
+              ]=>
+              array(3) {
+                [
+                  "httpMethod"
+                ]=>
+                string(4) "POST"[
+                  "uri"
+                ]=>
+                string(15) "/api/v1/folders"[
+                  "parameters"
+                ]=>
+                array(6) {
+                  [
+                    "workspaceId"
+                  ]=>
+                  array(4) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "description"
+                    ]=>
+                    string(43) "The ID of the project to list folders from."[
+                      "location"
+                    ]=>
+                    string(5) "query"[
+                      "required"
+                    ]=>
+                    bool(true)
+                  }
+                  [
+                    "environment"
+                  ]=>
+                  array(2) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "location"
+                    ]=>
+                    string(5) "query"
+                  }
+                  [
+                    "path"
+                  ]=>
+                  array(2) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "location"
+                    ]=>
+                    string(5) "query"
+                  }
+                  [
+                    "name"
+                  ]=>
+                  array(3) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "location"
+                    ]=>
+                    string(4) "json"[
+                      "required"
+                    ]=>
+                    bool(true)
+                  }
+                  [
+                    "directory"
+                  ]=>
+                  array(2) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "location"
+                    ]=>
+                    string(5) "query"
+                  }
+                  [
+                    "description"
+                  ]=>
+                  array(2) {
+                    [
+                      "type"
+                    ]=>
+                    string(6) "string"[
+                      "location"
+                    ]=>
+                    string(5) "query"
+                  }
+                }
+              }
+            }
+            [
+              "models":"GuzzleHttp\Command\Guzzle\Description":private
+            ]=>
+            array(1) {
+              [
+                "getResponse"
+              ]=>
+              array(2) {
+                [
+                  "type"
+                ]=>
+                string(6) "object"[
+                  "additionalProperties"
+                ]=>
+                array(1) {
+                  [
+                    "location"
+                  ]=>
+                  string(4) "json"
+                }
+              }
+            }
+            [
+              "name":"GuzzleHttp\Command\Guzzle\Description":private
+            ]=>
+            NULL
+            [
+              "apiVersion":"GuzzleHttp\Command\Guzzle\Description":private
+            ]=>
+            NULL
+            [
+              "description":"GuzzleHttp\Command\Guzzle\Description":private
+            ]=>
+            NULL
+            [
+              "extraData":"GuzzleHttp\Command\Guzzle\Description":private
+            ]=>
+            array(1) {
+              [
+                "baseUri"
+              ]=>
+              string(21) "http://localhost:8080"
+            }
+            [
+              "baseUri":"GuzzleHttp\Command\Guzzle\Description":private
+            ]=>
+            object(GuzzleHttp\Psr7\Uri)#9 (8) {
+              [
+                "scheme":"GuzzleHttp\Psr7\Uri":private
+              ]=>
+              string(4) "http"[
+                "userInfo":"GuzzleHttp\Psr7\Uri":private
+              ]=>
+              string(0) ""[
+                "host":"GuzzleHttp\Psr7\Uri":private
+              ]=>
+              string(9) "localhost"[
+                "port":"GuzzleHttp\Psr7\Uri":private
+              ]=>
+              int(8080)
+              [
+                "path":"GuzzleHttp\Psr7\Uri":private
+              ]=>
+              string(0) ""[
+                "query":"GuzzleHttp\Psr7\Uri":private
+              ]=>
+              string(0) ""[
+                "fragment":"GuzzleHttp\Psr7\Uri":private
+              ]=>
+              string(0) ""[
+                "composedComponents":"GuzzleHttp\Psr7\Uri":private
+              ]=>
+              NULL
+            }
+            [
+              "formatter":"GuzzleHttp\Command\Guzzle\Description":private
+            ]=>
+            object(GuzzleHttp\Command\Guzzle\SchemaFormatter)#10 (0) {}
+          }
+        }
+        [
+          1
+        ]=>
+        string(20) "validate_description"
+      }
+    }
+    [
+      "cached":"GuzzleHttp\HandlerStack":private
+    ]=>
+    NULL
+  }
+  [
+    "commandToRequestTransformer":"GuzzleHttp\Command\ServiceClient":private
+  ]=>
+  object(GuzzleHttp\Command\Guzzle\Serializer)#13 (2) {
+    [
+      "locations":"GuzzleHttp\Command\Guzzle\Serializer":private
+    ]=>
+    array(9) {
+      [
+        "fullBody"
+      ]=>
+      object(Infisical\Admin\Serialization\FullBodyLocation)#14 (5) {
+        [
+          "locationName":protected
+        ]=>
+        string(4) "json"[
+          "jsonContentType":"GuzzleHttp\Command\Guzzle\RequestLocation\JsonLocation":private
+        ]=>
+        string(16) "application/json"[
+          "jsonData":"GuzzleHttp\Command\Guzzle\RequestLocation\JsonLocation":private
+        ]=>
+        NULL
+        [
+          "jsonContentType":"Infisical\Admin\Serialization\FullBodyLocation":private
+        ]=>
+        string(16) "application/json"[
+          "jsonData":"Infisical\Admin\Serialization\FullBodyLocation":private
+        ]=>
+        NULL
+      }
+      [
+        "fullText"
+      ]=>
+      object(Infisical\Admin\Serialization\FullTextLocation)#15 (2) {
+        [
+          "locationName":protected
+        ]=>
+        string(8) "fulltext"[
+          "contentType":"Infisical\Admin\Serialization\FullTextLocation":private
+        ]=>
+        string(10) "text/plain"
+      }
+      [
+        "body"
+      ]=>
+      object(GuzzleHttp\Command\Guzzle\RequestLocation\BodyLocation)#16 (1) {
+        [
+          "locationName":protected
+        ]=>
+        string(4) "body"
+      }
+      [
+        "query"
+      ]=>
+      object(GuzzleHttp\Command\Guzzle\RequestLocation\QueryLocation)#17 (2) {
+        [
+          "locationName":protected
+        ]=>
+        string(5) "query"[
+          "querySerializer":"GuzzleHttp\Command\Guzzle\RequestLocation\QueryLocation":private
+        ]=>
+        object(GuzzleHttp\Command\Guzzle\QuerySerializer\Rfc3986Serializer)#18 (1) {
+          [
+            "removeNumericIndices":"GuzzleHttp\Command\Guzzle\QuerySerializer\Rfc3986Serializer":private
+          ]=>
+          bool(false)
+        }
+      }
+      [
+        "header"
+      ]=>
+      object(GuzzleHttp\Command\Guzzle\RequestLocation\HeaderLocation)#19 (1) {
+        [
+          "locationName":protected
+        ]=>
+        string(6) "header"
+      }
+      [
+        "json"
+      ]=>
+      object(GuzzleHttp\Command\Guzzle\RequestLocation\JsonLocation)#20 (3) {
+        [
+          "locationName":protected
+        ]=>
+        string(4) "json"[
+          "jsonContentType":"GuzzleHttp\Command\Guzzle\RequestLocation\JsonLocation":private
+        ]=>
+        string(16) "application/json"[
+          "jsonData":"GuzzleHttp\Command\Guzzle\RequestLocation\JsonLocation":private
+        ]=>
+        NULL
+      }
+      [
+        "xml"
+      ]=>
+      object(GuzzleHttp\Command\Guzzle\RequestLocation\XmlLocation)#21 (4) {
+        [
+          "locationName":protected
+        ]=>
+        string(3) "xml"[
+          "writer":"GuzzleHttp\Command\Guzzle\RequestLocation\XmlLocation":private
+        ]=>
+        NULL
+        [
+          "contentType":"GuzzleHttp\Command\Guzzle\RequestLocation\XmlLocation":private
+        ]=>
+        string(15) "application/xml"[
+          "buffered":"GuzzleHttp\Command\Guzzle\RequestLocation\XmlLocation":private
+        ]=>
+        array(0) {}
+      }
+      [
+        "formParam"
+      ]=>
+      object(GuzzleHttp\Command\Guzzle\RequestLocation\FormParamLocation)#22 (3) {
+        [
+          "locationName":protected
+        ]=>
+        string(9) "formParam"[
+          "contentType":protected
+        ]=>
+        string(48) "application/x-www-form-urlencoded; charset=utf-8"[
+          "formParamsData":protected
+        ]=>
+        array(0) {}
+      }
+      [
+        "multipart"
+      ]=>
+      object(GuzzleHttp\Command\Guzzle\RequestLocation\MultiPartLocation)#23 (3) {
+        [
+          "locationName":protected
+        ]=>
+        string(9) "multipart"[
+          "contentType":protected
+        ]=>
+        string(30) "multipart/form-data; boundary="[
+          "multipartData":protected
+        ]=>
+        array(0) {}
+      }
+    }
+    [
+      "description":"GuzzleHttp\Command\Guzzle\Serializer":private
+    ]=>
+    object(GuzzleHttp\Command\Guzzle\Description)#8 (8) {
+      [
+        "operations":"GuzzleHttp\Command\Guzzle\Description":private
+      ]=>
+      array(3) {
+        [
+          "getToken"
+        ]=>
+        array(4) {
+          [
+            "httpMethod"
+          ]=>
+          string(4) "POST"[
+            "uri"
+          ]=>
+          string(33) "/api/v1/auth/universal-auth/login"[
+            "responseModel"
+          ]=>
+          string(11) "getResponse"[
+            "parameters"
+          ]=>
+          array(2) {
+            [
+              "clientId"
+            ]=>
+            array(2) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "location"
+              ]=>
+              string(9) "formParam"
+            }
+            [
+              "clientSecret"
+            ]=>
+            array(2) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "location"
+              ]=>
+              string(9) "formParam"
+            }
+          }
+        }
+        [
+          "listFolders"
+        ]=>
+        array(4) {
+          [
+            "httpMethod"
+          ]=>
+          string(3) "GET"[
+            "uri"
+          ]=>
+          string(15) "/api/v1/folders"[
+            "responseModel"
+          ]=>
+          string(11) "getResponse"[
+            "parameters"
+          ]=>
+          array(5) {
+            [
+              "workspaceId"
+            ]=>
+            array(4) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "description"
+              ]=>
+              string(43) "The ID of the project to list folders from."[
+                "location"
+              ]=>
+              string(5) "query"[
+                "required"
+              ]=>
+              bool(true)
+            }
+            [
+              "environment"
+            ]=>
+            array(2) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "location"
+              ]=>
+              string(5) "query"
+            }
+            [
+              "path"
+            ]=>
+            array(2) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "location"
+              ]=>
+              string(5) "query"
+            }
+            [
+              "directory"
+            ]=>
+            array(2) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "location"
+              ]=>
+              string(5) "query"
+            }
+            [
+              "recursive"
+            ]=>
+            array(2) {
+              [
+                "type"
+              ]=>
+              string(7) "boolean"[
+                "location"
+              ]=>
+              string(5) "query"
+            }
+          }
+        }
+        [
+          "createFolder"
+        ]=>
+        array(3) {
+          [
+            "httpMethod"
+          ]=>
+          string(4) "POST"[
+            "uri"
+          ]=>
+          string(15) "/api/v1/folders"[
+            "parameters"
+          ]=>
+          array(6) {
+            [
+              "workspaceId"
+            ]=>
+            array(4) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "description"
+              ]=>
+              string(43) "The ID of the project to list folders from."[
+                "location"
+              ]=>
+              string(5) "query"[
+                "required"
+              ]=>
+              bool(true)
+            }
+            [
+              "environment"
+            ]=>
+            array(2) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "location"
+              ]=>
+              string(5) "query"
+            }
+            [
+              "path"
+            ]=>
+            array(2) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "location"
+              ]=>
+              string(5) "query"
+            }
+            [
+              "name"
+            ]=>
+            array(3) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "location"
+              ]=>
+              string(4) "json"[
+                "required"
+              ]=>
+              bool(true)
+            }
+            [
+              "directory"
+            ]=>
+            array(2) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "location"
+              ]=>
+              string(5) "query"
+            }
+            [
+              "description"
+            ]=>
+            array(2) {
+              [
+                "type"
+              ]=>
+              string(6) "string"[
+                "location"
+              ]=>
+              string(5) "query"
+            }
+          }
+        }
+      }
+      [
+        "models":"GuzzleHttp\Command\Guzzle\Description":private
+      ]=>
+      array(1) {
+        [
+          "getResponse"
+        ]=>
+        array(2) {
+          [
+            "type"
+          ]=>
+          string(6) "object"[
+            "additionalProperties"
+          ]=>
+          array(1) {
+            [
+              "location"
+            ]=>
+            string(4) "json"
+          }
+        }
+      }
+      [
+        "name":"GuzzleHttp\Command\Guzzle\Description":private
+      ]=>
+      NULL
+      [
+        "apiVersion":"GuzzleHttp\Command\Guzzle\Description":private
+      ]=>
+      NULL
+      [
+        "description":"GuzzleHttp\Command\Guzzle\Description":private
+      ]=>
+      NULL
+      [
+        "extraData":"GuzzleHttp\Command\Guzzle\Description":private
+      ]=>
+      array(1) {
+        [
+          "baseUri"
+        ]=>
+        string(21) "http://localhost:8080"
+      }
+      [
+        "baseUri":"GuzzleHttp\Command\Guzzle\Description":private
+      ]=>
+      object(GuzzleHttp\Psr7\Uri)#9 (8) {
+        [
+          "scheme":"GuzzleHttp\Psr7\Uri":private
+        ]=>
+        string(4) "http"[
+          "userInfo":"GuzzleHttp\Psr7\Uri":private
+        ]=>
+        string(0) ""[
+          "host":"GuzzleHttp\Psr7\Uri":private
+        ]=>
+        string(9) "localhost"[
+          "port":"GuzzleHttp\Psr7\Uri":private
+        ]=>
+        int(8080)
+        [
+          "path":"GuzzleHttp\Psr7\Uri":private
+        ]=>
+        string(0) ""[
+          "query":"GuzzleHttp\Psr7\Uri":private
+        ]=>
+        string(0) ""[
+          "fragment":"GuzzleHttp\Psr7\Uri":private
+        ]=>
+        string(0) ""[
+          "composedComponents":"GuzzleHttp\Psr7\Uri":private
+        ]=>
+        NULL
+      }
+      [
+        "formatter":"GuzzleHttp\Command\Guzzle\Description":private
+      ]=>
+      object(GuzzleHttp\Command\Guzzle\SchemaFormatter)#10 (0) {}
+    }
+  }
+  [
+    "responseToResultTransformer":"GuzzleHttp\Command\ServiceClient":private
+  ]=>
+  object(Closure)#24 (4) {
+    [
+      "name"
+    ]=>
+    string(55) "{closure:Infisical\Admin\InfisicalClient::factory():74}"[
+      "file"
+    ]=>
+    string(81) "/home/tadiwapfachi/Projects/nerd-zero/infisical-php/src/Admin/InfisicalClient.php"[
+      "line"
+    ]=>
+    int(74)
+    [
+      "parameter"
+    ]=>
+    array(1) {
+      [
+        "$response"
+      ]=>
+      string(10) "<required>"
+    }
+  }
+  [
+    "config":"GuzzleHttp\Command\Guzzle\GuzzleClient":private
+  ]=>
+  array(6) {
+    [
+      "clientId"
+    ]=>
+    string(36) "4c7547d1-cc6c-47a1-9516-416fe7d6f04f"[
+      "clientSecret"
+    ]=>
+    string(64) "51a67de36f7e5c28e791b62ad14290f5c7f0f3092906eab810bb9ed79743f57b"[
+      "baseUri"
+    ]=>
+    string(21) "http://localhost:8080"[
+      "apiVersion"
+    ]=>
+    string(5) "0.0.1"[
+      "token_storage"
+    ]=>
+    object(Infisical\Admin\TokenStorages\RuntimeTokenStorage)#2 (1) {
+      [
+        "token":"Infisical\Admin\TokenStorages\RuntimeTokenStorage":private
+      ]=>
+      NULL
+    }
+    [
+      "handler"
+    ]=>
+    object(GuzzleHttp\HandlerStack)#4 (3) {
+      [
+        "handler":"GuzzleHttp\HandlerStack":private
+      ]=>
+      object(GuzzleHttp\Handler\CurlHandler)#5 (1) {
+        [
+          "factory":"GuzzleHttp\Handler\CurlHandler":private
+        ]=>
+        object(GuzzleHttp\Handler\CurlFactory)#6 (2) {
+          [
+            "handles":"GuzzleHttp\Handler\CurlFactory":private
+          ]=>
+          array(0) {}
+          [
+            "maxHandles":"GuzzleHttp\Handler\CurlFactory":private
+          ]=>
+          int(3)
+        }
+      }
+      [
+        "stack":"GuzzleHttp\HandlerStack":private
+      ]=>
+      array(1) {
+        [
+          0
+        ]=>
+        array(2) {
+          [
+            0
+          ]=>
+          object(Infisical\Admin\Middleware\RefreshToken)#7 (1) {
+            [
+              "tokenStorage":"Infisical\Admin\Middleware\RefreshToken":private
+            ]=>
+            object(Infisical\Admin\TokenStorages\RuntimeTokenStorage)#2 (1) {
+              [
+                "token":"Infisical\Admin\TokenStorages\RuntimeTokenStorage":private
+              ]=>
+              NULL
+            }
+          }
+          [
+            1
+          ]=>
+          string(0) ""
+        }
+      }
+      [
+        "cached":"GuzzleHttp\HandlerStack":private
+      ]=>
+      NULL
+    }
+  }
+  [
+    "description":"GuzzleHttp\Command\Guzzle\GuzzleClient":private
+  ]=>
+  object(GuzzleHttp\Command\Guzzle\Description)#8 (8) {
+    [
+      "operations":"GuzzleHttp\Command\Guzzle\Description":private
+    ]=>
+    array(3) {
+      [
+        "getToken"
+      ]=>
+      array(4) {
+        [
+          "httpMethod"
+        ]=>
+        string(4) "POST"[
+          "uri"
+        ]=>
+        string(33) "/api/v1/auth/universal-auth/login"[
+          "responseModel"
+        ]=>
+        string(11) "getResponse"[
+          "parameters"
+        ]=>
+        array(2) {
+          [
+            "clientId"
+          ]=>
+          array(2) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "location"
+            ]=>
+            string(9) "formParam"
+          }
+          [
+            "clientSecret"
+          ]=>
+          array(2) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "location"
+            ]=>
+            string(9) "formParam"
+          }
+        }
+      }
+      [
+        "listFolders"
+      ]=>
+      array(4) {
+        [
+          "httpMethod"
+        ]=>
+        string(3) "GET"[
+          "uri"
+        ]=>
+        string(15) "/api/v1/folders"[
+          "responseModel"
+        ]=>
+        string(11) "getResponse"[
+          "parameters"
+        ]=>
+        array(5) {
+          [
+            "workspaceId"
+          ]=>
+          array(4) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "description"
+            ]=>
+            string(43) "The ID of the project to list folders from."[
+              "location"
+            ]=>
+            string(5) "query"[
+              "required"
+            ]=>
+            bool(true)
+          }
+          [
+            "environment"
+          ]=>
+          array(2) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "location"
+            ]=>
+            string(5) "query"
+          }
+          [
+            "path"
+          ]=>
+          array(2) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "location"
+            ]=>
+            string(5) "query"
+          }
+          [
+            "directory"
+          ]=>
+          array(2) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "location"
+            ]=>
+            string(5) "query"
+          }
+          [
+            "recursive"
+          ]=>
+          array(2) {
+            [
+              "type"
+            ]=>
+            string(7) "boolean"[
+              "location"
+            ]=>
+            string(5) "query"
+          }
+        }
+      }
+      [
+        "createFolder"
+      ]=>
+      array(3) {
+        [
+          "httpMethod"
+        ]=>
+        string(4) "POST"[
+          "uri"
+        ]=>
+        string(15) "/api/v1/folders"[
+          "parameters"
+        ]=>
+        array(6) {
+          [
+            "workspaceId"
+          ]=>
+          array(4) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "description"
+            ]=>
+            string(43) "The ID of the project to list folders from."[
+              "location"
+            ]=>
+            string(5) "query"[
+              "required"
+            ]=>
+            bool(true)
+          }
+          [
+            "environment"
+          ]=>
+          array(2) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "location"
+            ]=>
+            string(5) "query"
+          }
+          [
+            "path"
+          ]=>
+          array(2) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "location"
+            ]=>
+            string(5) "query"
+          }
+          [
+            "name"
+          ]=>
+          array(3) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "location"
+            ]=>
+            string(4) "json"[
+              "required"
+            ]=>
+            bool(true)
+          }
+          [
+            "directory"
+          ]=>
+          array(2) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "location"
+            ]=>
+            string(5) "query"
+          }
+          [
+            "description"
+          ]=>
+          array(2) {
+            [
+              "type"
+            ]=>
+            string(6) "string"[
+              "location"
+            ]=>
+            string(5) "query"
+          }
+        }
+      }
+    }
+    [
+      "models":"GuzzleHttp\Command\Guzzle\Description":private
+    ]=>
+    array(1) {
+      [
+        "getResponse"
+      ]=>
+      array(2) {
+        [
+          "type"
+        ]=>
+        string(6) "object"[
+          "additionalProperties"
+        ]=>
+        array(1) {
+          [
+            "location"
+          ]=>
+          string(4) "json"
+        }
+      }
+    }
+    [
+      "name":"GuzzleHttp\Command\Guzzle\Description":private
+    ]=>
+    NULL
+    [
+      "apiVersion":"GuzzleHttp\Command\Guzzle\Description":private
+    ]=>
+    NULL
+    [
+      "description":"GuzzleHttp\Command\Guzzle\Description":private
+    ]=>
+    NULL
+    [
+      "extraData":"GuzzleHttp\Command\Guzzle\Description":private
+    ]=>
+    array(1) {
+      [
+        "baseUri"
+      ]=>
+      string(21) "http://localhost:8080"
+    }
+    [
+      "baseUri":"GuzzleHttp\Command\Guzzle\Description":private
+    ]=>
+    object(GuzzleHttp\Psr7\Uri)#9 (8) {
+      [
+        "scheme":"GuzzleHttp\Psr7\Uri":private
+      ]=>
+      string(4) "http"[
+        "userInfo":"GuzzleHttp\Psr7\Uri":private
+      ]=>
+      string(0) ""[
+        "host":"GuzzleHttp\Psr7\Uri":private
+      ]=>
+      string(9) "localhost"[
+        "port":"GuzzleHttp\Psr7\Uri":private
+      ]=>
+      int(8080)
+      [
+        "path":"GuzzleHttp\Psr7\Uri":private
+      ]=>
+      string(0) ""[
+        "query":"GuzzleHttp\Psr7\Uri":private
+      ]=>
+      string(0) ""[
+        "fragment":"GuzzleHttp\Psr7\Uri":private
+      ]=>
+      string(0) ""[
+        "composedComponents":"GuzzleHttp\Psr7\Uri":private
+      ]=>
+      NULL
+    }
+    [
+      "formatter":"GuzzleHttp\Command\Guzzle\Description":private
+    ]=>
+    object(GuzzleHttp\Command\Guzzle\SchemaFormatter)#10 (0) {}
+  }
+}
