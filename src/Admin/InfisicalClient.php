@@ -67,7 +67,7 @@ class InfisicalClient extends GuzzleClient
 
         $file = "{$config['apiVersion']}.php";
 
-        $serviceDescriptionData = include __DIR__ . "/Resources/{$file}";
+        $serviceDescriptionData = include __DIR__ . "/Resources/v{$file}";
         $customOperations = isset($config["custom_operations"]) && is_array($config["custom_operations"]) ? $config["custom_operations"] : [];
 
         foreach ($customOperations as $operationKey => $operation) {
