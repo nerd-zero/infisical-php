@@ -10,7 +10,9 @@
   },
   "authors": [
     {
-      "name": "nerd-zero"
+      "name": "nerd-zero",
+      "website": "https://packages.n0.rocks",
+      "email": ""
     }
   ],
   "require": {

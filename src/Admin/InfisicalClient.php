@@ -17,10 +17,23 @@ use Infisical\Admin\Serialization\FullTextLocation;
 
 /**
  * class InfisicalClient
- * @package InfisicalPhp\Admin
- * @method array getToken array $args=array() Get the access token
- * @method array listFolders array $args=array() List all folders in the workspace directory
- * @method array createFolder array $args=array() { @command Infisical createFolder }
+ * @package Infisical\Admin
+ * @method array getToken array $args=array() Get the access token;
+ * @method array listFolders array $args=array() List all folders in the workspace directory;
+ * @method array getFolderById array $args=array() Get a folder by id;
+ * @method array createFolder array $args=array() { @command Infisical createFolder };
+ * @method array updateFolder array $args=array() { @command Infisical updateFolder };
+ * @method array deleteFolder array $args=array() { @command Infisical deleteFolder };
+ * @method array listSecrets array $args=array() { @command Infisical listSecrets };
+ * @method array createSecret array $args=array() { @command Infisical createSecret };
+ * @method array retrieveSecret array $args=array() { @command Infisical retrieveSecret };
+ * @method array updateSecret array $args=array() { @command Infisical updateSecret };
+ * @method array deleteSecret array $args=array() { @command Infisical deleteSecret };
+ * @method array bulkCreateSecrets array $args=array() { @command Infisical bulkCreateSecrets };
+ * @method array bulkUpdateSecrets array $args=array() { @command Infisical bulkUpdateSecrets };
+ * @method array bulkDeleteSecrets array $args=array() { @command Infisical bulkDeleteSecrets };
+ * @method array attachTags array $args=array() { @command Infisical attachTags };
+ * @method array detachTags array $args=array() { @command Infisical detachTags };
  */
 class InfisicalClient extends GuzzleClient
 {
@@ -55,6 +68,7 @@ class InfisicalClient extends GuzzleClient
         $file = "{$config['apiVersion']}.php";
         $serviceDescriptionData = include __DIR__ . "/Resources/{$file}";
         $customOperations = isset($config["custom_operations"]) && is_array($config["custom_operations"]) ? $config["custom_operations"] : [];
+
         foreach ($customOperations as $operationKey => $operation) {
             // Do not override built-in functionality
             if (isset($serviceDescription['operations'][$operationKey])) {
@@ -62,22 +76,8 @@ class InfisicalClient extends GuzzleClient
             }
             $serviceDescription['operations'][$operationKey] = $operation;
         }
-        $description = new Description($serviceDescriptionData);
 
-        var_dump(new static(
-            new Client($config),
-            $description,
-            new Serializer($description, [
-                "fullBody" => new FullBodyLocation(),
-                "fullText" => new FullTextLocation(),
-            ]),
-            function ($response) {
-                $responseBody = $response->getBody()->getContents();
-                return json_decode($responseBody, true) ?? ['content' => $responseBody];
-            },
-            null,
-            $config
-        ));
+        $description = new Description($serviceDescriptionData);
 
         return new static(
             new Client($config),
