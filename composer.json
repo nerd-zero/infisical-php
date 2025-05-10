@@ -10,8 +10,7 @@
   },
   "authors": [
     {
-      "name": "nerd-zero",
-      "website": "https://packages.n0.rocks"
+      "name": "nerd-zero"
     }
   ],
   "require": {

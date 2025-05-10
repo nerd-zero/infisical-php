@@ -2,7 +2,7 @@
 
 namespace Infisical\Admin\TokenStorages;
 
-class RuntimeTokenStorage implements TokenStorage
+class RunTimeTokenStorage implements TokenStorage
 {
     /**
      * @var ?array
