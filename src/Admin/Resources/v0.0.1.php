@@ -1,6 +1,6 @@
 <?php
 
-require 'Definitions/v0.0.1.php';
+require 'Descriptions/v0.0.1.php';
 
 return array(
     'baseUri' => $config['baseUri'],
