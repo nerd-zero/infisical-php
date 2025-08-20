@@ -165,7 +165,7 @@ return array(
         ],
         'createSecret' => [
             'httpMethod' => 'POST',
-            'uri' => '/api/v3/secrets/raw{secretName}',
+            'uri' => '/api/v3/secrets/raw/{secretName}',
             'responseModel' => 'getResponse',
             'parameters' => [
                 ...$defaultsJson,
